@@ -46,6 +46,7 @@ class BookDetailView(DetailView):
 
 class AuthorListView(ListView):
     model = Author
+    paginate_by = 2
 
     def get_queryset(self):
         return Author.objects.all()
@@ -96,6 +97,7 @@ class AuthorCreate(CreateView):
 class AuthorUpdate(UpdateView):
     model = Author
     fields = ['first_name', 'last_name', 'date_of_birth', 'date_of_death']
+    success_url = reverse_lazy('authors')
 
 
 class AuthorDelete(DeleteView):
@@ -111,6 +113,7 @@ class BookCreate(CreateView):
 class BookUpdate(UpdateView):
     model = Book
     fields = '__all__'
+    success_url = reverse_lazy('books')
 
 
 class BookDelete(DeleteView):
