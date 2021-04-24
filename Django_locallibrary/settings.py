@@ -28,7 +28,7 @@ SECRET_KEY = 'y0ig!owa1=9+9m4i5jyavuq=2^p79w4+520ek$9erq01&%p_ws'
 # DEBUG = True
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['moscow-local-library.herokuapp.com']
 
 
 # Application definition
